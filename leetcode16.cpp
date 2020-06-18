@@ -17,10 +17,6 @@ public:
             int q = nums.size()-1;
             c_target = target - nums[i];
             while(k < q){
-                while(k<q && nums[k]==nums[k+1])
-                    k++;
-                while(k<q && nums[q]==nums[q-1])
-                    q--;
                 int sum_two = nums[k] + nums[q];
                 if(abs(sum_two-c_target)<diff){
                     diff = abs(sum_two - c_target);
